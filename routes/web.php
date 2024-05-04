@@ -3,24 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home Page']);
 });
 
 Route::get('/about', function () {
-    return view('about', ['name' => 'Muhammad Hafiz']);
+    return view('about', ['name' => 'Muhammad Hafiz', 'age' => 22, 'title' => 'About Page']);
 });
-
-// Buat 2 rute baru
-// 1. /blog
-// 2 buah artikel, judul dan isi bebas
-// 2. /contact
-// email & social media
-
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog', ['title' => 'Blog Page']);
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['title' => 'Contact Page']);
 });
 
