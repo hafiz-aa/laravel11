@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Models;
+
+use Illuminate\Support\Arr;
+
 class Post
 {
     public static function all() {
@@ -21,5 +24,13 @@ class Post
             ],
         ];
     }
-    
+
+    public static function find($slug) {
+        $post = Arr::first(static::all(), fn ($post) => $post['slug'] === $slug);
+
+        if(!$post) {
+            abort(404);
+     }
+    return $post;
+  }   
 }
