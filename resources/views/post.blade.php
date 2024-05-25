@@ -7,7 +7,7 @@
         <h2 class="mb-1 text-lg tracking-tight font-bold text-gray-900">{{ $post['title']}} </h2>
      
       <div class="text-sm text-gray-600">
-        <a href="#">{{ $post['author']}} </a>| {{ $post['created_at']-> format('d M Y')}}
+        <a href="/authors/{{ $post->author->id}}">{{ $post->author->name}} </a>| {{ $post['created_at']-> format('d M Y')}}
       </div>
       <p class="my-3 font-light">{{$post['body']}}</p>
       <a href="/posts" class="font-medium text-blue-500 hover:underline">&laquo;Back to posts</a>
