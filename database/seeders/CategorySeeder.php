@@ -18,14 +18,17 @@ class CategorySeeder extends Seeder
         Category::create([
             'name' => 'Data Science',
             'slug' => 'data-science',
+            'color' => 'red',
         ]);
         Category::create ([
             'name' => 'Programming',
             'slug' => 'programming',
+            'color' => 'green',
         ]);
         Category::create ([
             'name' => 'Web Development',
             'slug' => 'web-development',
+            'color' => 'blue',
         ]);
     }
 }
