@@ -3,7 +3,7 @@
   <x-slot:title>{{ $title }}</x-slot:title>
 
 
-  <div class="py-4 px-4 mx-auto max-w-screen-xl lg:px-6">
+  <div class="my-4 py-4 px-4 mx-auto max-w-screen-xl lg:px-6">
     <div class="mx-auto max-w-screen-md sm:text-center">
         <form>
           @if (request('category'))
@@ -30,6 +30,7 @@
     </div>
   </div>
 
+  {{ $posts->links() }}
 
   <div class="py-8 px-4 smx-auto max-w-screen-xl lg:py-8 lg:px-0">
     <div class="grid gap-8 lg:grid-cols-3">
@@ -62,7 +63,7 @@
               </a>
             </div>
         </article> 
-    
+        
       @empty
       <div class="p-6 ">
         <p class="font-semibold text-gray-500 dark:text-gray-400">Article not found</p>
@@ -71,4 +72,6 @@
       @endforelse
    </div>  
   </div>
+
+  {{ $posts->links() }}
 </x-layout>
